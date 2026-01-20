@@ -1,3 +1,5 @@
+// Day 02
+
 window.onload = function () {
   const url = "https://jsonplaceholder.typicode.com/todos";
 

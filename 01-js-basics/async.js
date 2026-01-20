@@ -1,3 +1,5 @@
+// Day 02
+
 // Promise - Build
 function buildPromise(arr) {
   const promise = new Promise((resolve, reject) => {
@@ -55,3 +57,21 @@ async function consumePromiseWithAsyncAwait() {
 }
 
 consumePromiseWithAsyncAwait();
+
+// Promise API
+function promiseFactory(data, ms) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => resolve(data), ms);
+  });
+}
+
+const p1 = promiseFactory("First", 1000);
+const p2 = promiseFactory("Second", 1500);
+const p3 = promiseFactory("Third", 2000);
+const p4 = Promise.reject(new Error("Rejecetd"));
+
+Promise.allSettled([p1, p2, p3, p4])
+  .then((response) => {
+    console.log("Response : ", response);
+  })
+  .catch(console.error);
