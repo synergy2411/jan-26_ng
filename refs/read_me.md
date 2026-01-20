@@ -57,3 +57,7 @@
 > any
 > resolve
 > reject
+
+# TypeScript Project
+
+- npm create vite@latest
