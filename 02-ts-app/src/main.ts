@@ -1,3 +1,18 @@
+// Day 03
+// import getDailyRoutine, { getLuckyNumber, getQuote } from "./utils/fortune";
+
+// import * as fortune from "./utils/fortune";
+
+// console.log(RANDOM_NUMBER);
+
+// console.log("Your lucky number today is ", getLuckyNumber());
+
+// console.log(getQuote());
+
+// console.log(getDailyRoutine());
+
+// Day 02
+
 // Explicit Type
 let x: string;
 x = "Hello World";

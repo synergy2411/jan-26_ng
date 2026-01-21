@@ -61,3 +61,16 @@
 # TypeScript Project
 
 - npm create vite@latest
+
+# Angular - Building Blocks
+
+- Component : @Component({})
+- Directive : @Directive({})
+- Pipe : @Pipe({})
+- Service : @Injectable({})
+- Module : @NgModule({})
+
+- Class : @Component({}), @Directive({}) etc
+- Properties : @Input(), @HostBinding(), @Output()
+- Methods : @HostListener()
+- Parameters : @Skip(), @Optional(), @Host()
