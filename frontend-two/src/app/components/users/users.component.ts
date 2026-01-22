@@ -15,4 +15,8 @@ export class UsersComponent {
     company: 'World Wide Web',
     avatar: './assets/images/tim.jpg',
   };
+
+  onMoreInfo(person: any) {
+    alert(`Mr. ${person.lastName} is working with ${person.company}.`);
+  }
 }

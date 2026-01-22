@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { UsersComponent } from './components/users/users.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -11,8 +12,9 @@ import { UsersComponent } from './components/users/users.component';
     UsersComponent,
   ],
   imports: [
-    // Module
+    // Module : Built-in / Custom Module
     BrowserModule,
+    FormsModule,
   ],
   providers: [], // Service
   bootstrap: [AppComponent],

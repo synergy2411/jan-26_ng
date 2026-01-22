@@ -1,9 +1,20 @@
-<ul>
-  <li>
-    <img [src]="user.avatar" [alt]="user.firstName" />
-    <h1>{{ user.firstName }} {{ user.lastName }}</h1>
-    <p>Date of Birth : <span [innerHTML]="user.dob"></span></p>
-    <p>Income : <span [innerHTML]="user.income"></span></p>
-    <input type="number" [value]="user.income" />
+<ul class="list-group">
+  <li class="list-group-item">
+    <div class="row">
+      <div class="col-4">
+        <img
+          class="img-fluid rounded-circle"
+          [src]="user.avatar"
+          [alt]="user.firstName"
+        />
+        <button (click)="onMoreInfo(user)">More Info</button>
+      </div>
+      <div class="col">
+        <h1>{{ user.firstName }} {{ user.lastName }}</h1>
+        <p>Date of Birth : <span [innerHTML]="user.dob"></span></p>
+        <p>Income : <span [innerHTML]="user.income"></span></p>
+        <input type="number" [(ngModel)]="user.income" />
+      </div>
+    </div>
   </li>
 </ul>
