@@ -2,11 +2,25 @@
   <li class="list-group-item">
     <div class="row">
       <div class="col-4">
-        <app-user-img [user]="user"></app-user-img>
+        <app-user-img
+          (childEvent)="onMoreInfo($event)"
+          [user]="user"
+        ></app-user-img>
       </div>
       <div class="col">
-        <app-user-info [user]="user"></app-user-info>
+        <app-user-info [user]="user">
+          <h1>{{ user.lastName }} {{ user.firstName }}</h1>
+          <main>The Main Content</main>
+          <footer>&copy; Rights Reserved.</footer>
+        </app-user-info>
       </div>
     </div>
   </li>
 </ul>
+
+<!-- <app-card>
+  <h1>Heading</h1>
+  <p>Text</p>
+  <button>Ok</button>
+  <button>Cancel</button>
+</app-card> -->
