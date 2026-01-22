@@ -30,6 +30,10 @@ export class LifeCycleComponent
 {
   @Input() title: string = '';
 
+  constructor() {
+    console.log('constructor');
+  }
+
   ngOnChanges(changes: SimpleChanges): void {
     console.log('ngOnChanges', changes);
   }
