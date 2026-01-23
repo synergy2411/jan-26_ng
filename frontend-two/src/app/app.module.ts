@@ -13,6 +13,7 @@ import { BetterHighlightDirective } from './directives/better-highlight.directiv
 import { PipeComponent } from './components/demo/pipe/pipe.component';
 import { CountryCodePipe } from './pipes/country-code.pipe';
 import { FilterPipe } from './pipes/filter.pipe';
+import { LoginComponent } from './components/auth/login/login.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { FilterPipe } from './pipes/filter.pipe';
     PipeComponent,
     CountryCodePipe,
     FilterPipe,
+    LoginComponent,
   ],
   imports: [
     // Module : Built-in / Custom Module
