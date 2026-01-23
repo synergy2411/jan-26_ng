@@ -3,7 +3,12 @@
 <ng-content></ng-content>
 
 <p>Date of Birth : <span [innerHTML]="user.dob"></span></p>
-<p>Income : <span [innerHTML]="user.income"></span></p>
+
+@if (user.isWorking) {
+  <p>Income : <span [innerHTML]="user.income"></span></p>
+} @else {
+  <p>Mr. {{ user.lastName.toUpperCase() }} is not working now!</p>
+}
 <input type="number" [(ngModel)]="user.income" />
 
 <ng-content select="footer"></ng-content>

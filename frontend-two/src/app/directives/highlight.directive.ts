@@ -44,8 +44,9 @@ export class HighlightDirective {
   // }
 }
 
-// <h1 class="appHighlight">
-// <app-highlight>
+// <h1 [ngClass]="{appHighlight : isFirst}">
+
+// <app-highlight> </app-highlight>
 // <h1 appHighlight>
 
 // <div class="container" data-xyz="hero"></div>

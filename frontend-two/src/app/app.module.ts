@@ -9,6 +9,8 @@ import { UserImgComponent } from './components/users/user-img/user-img.component
 import { LifeCycleComponent } from './components/demo/life-cycle/life-cycle.component';
 import { DirectivesComponent } from './components/demo/directives/directives.component';
 import { HighlightDirective } from './directives/highlight.directive';
+import { BetterHighlightDirective } from './directives/better-highlight.directive';
+import { PipeComponent } from './components/demo/pipe/pipe.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +22,8 @@ import { HighlightDirective } from './directives/highlight.directive';
     LifeCycleComponent,
     DirectivesComponent,
     HighlightDirective,
+    BetterHighlightDirective,
+    PipeComponent,
   ],
   imports: [
     // Module : Built-in / Custom Module

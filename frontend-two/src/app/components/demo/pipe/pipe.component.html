@@ -1,0 +1,13 @@
+<h1>Pipe Examples</h1>
+
+<h2>Built-in Pipes</h2>
+
+<p>UpperCase Pipe : {{ "hello world" | uppercase }}</p>
+<p>LowerCase Pipe : <span [innerHTML]="someText | lowercase"></span></p>
+<p>TitleCase Pipe : {{ "HELLO WORLD" | titlecase }}</p>
+<p>Percent Pipe : {{ 0.8 | percent }}</p>
+<p>Currency Pipe : {{ 10 | currency: "INR" }}</p>
+<p>Date Pipe : {{ theDate | date: "dd-MM-yyyy" }}</p>
+<p>JSON Pipe : {{ { firstName: "John", lastName: "Doe" } | json }}</p>
+<p>Number Pipe : {{ 123.4567 | number: "5.1-2" }}</p>
+<p>Async Pipe : {{ promise | async }}</p>
