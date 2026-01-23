@@ -20,4 +20,15 @@ export class PipeComponent {
     { label: 'planting', status: 'completed' },
     { label: 'insurance', status: 'pending' },
   ];
+
+  onAddTodo() {
+    // Impure Change
+    this.todoCollection.push({ label: 'New Todo', status: 'pending' });
+
+    // Pure Change
+    // this.todoCollection = [
+    //   { label: 'Fresh Todo', status: 'pending' },
+    //   ...this.todoCollection,
+    // ];
+  }
 }

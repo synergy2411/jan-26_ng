@@ -143,3 +143,9 @@
 - Component Directive
 - Attributes Directive (ngClass, ngStyle)
 - Structural Directive
+
+let friends = ["monica", "ross", "joe"]
+
+friends.push("rachel"); // Impure change
+
+friends = ["monica", "ross", "joey", "rachel"] // Pure change
