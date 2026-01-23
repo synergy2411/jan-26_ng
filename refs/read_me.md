@@ -118,6 +118,7 @@
 
 - ng generate component path/to/component
 - ng g c components/users
+- ng g d directives/highlight
 
 ## Bootstrap Library
 
