@@ -12,9 +12,21 @@
               name="username"
               id="username"
               placeholder=""
-              [formControl]="username"
+              formControlName="username"
             />
             <label for="username">Username</label>
+
+            <!-- Error Messages - username -->
+            <div *ngIf="username.touched && username.invalid">
+              <div *ngIf="username.hasError('required')">
+                <p class="alert alert-danger">Username field is mandatory.</p>
+              </div>
+              <div *ngIf="username.hasError('email')">
+                <p class="alert alert-danger">
+                  Username field should have proper email format
+                </p>
+              </div>
+            </div>
           </div>
 
           <!-- password -->
@@ -25,7 +37,7 @@
               name="password"
               id="password"
               placeholder=""
-              [formControl]="password"
+              formControlName="password"
             />
             <label for="password">Password</label>
           </div>
