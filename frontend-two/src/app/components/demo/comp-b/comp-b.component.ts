@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Optional, SkipSelf } from '@angular/core';
 import { CounterService } from '../../../services/counter.service';
 
 @Component({
@@ -8,5 +8,5 @@ import { CounterService } from '../../../services/counter.service';
   providers: [CounterService],
 })
 export class CompBComponent {
-  constructor(public service: CounterService) {}
+  constructor(@Optional() public service: CounterService) {}
 }

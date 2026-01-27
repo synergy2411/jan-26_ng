@@ -186,3 +186,10 @@
 
 - CompA
 - CompB
+
+### Dependency Injector Modifiers
+
+- @SkipSelf() : Don't search the token inside the same component
+- @Self() : Only search injector token inside the same/self component
+- @Host() : Search injector token in Parent/Host component
+- @Optional() : Ignors NullInjector Error, making the Dependency as optional.

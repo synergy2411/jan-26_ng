@@ -44,7 +44,12 @@ import { CompBComponent } from './components/demo/comp-b/comp-b.component';
     FormsModule,
     ReactiveFormsModule,
   ],
-  providers: [], // Service
+  providers: [
+    {
+      provide: UserService,
+      useClass: UserService,
+    },
+  ], // Service
   bootstrap: [AppComponent],
 })
 export class AppModule {}
