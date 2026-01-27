@@ -15,6 +15,9 @@ import { CountryCodePipe } from './pipes/country-code.pipe';
 import { FilterPipe } from './pipes/filter.pipe';
 import { LoginComponent } from './components/auth/login/login.component';
 import { RegisterComponent } from './components/auth/register/register.component';
+import { UserService } from './services/user.service';
+import { CompAComponent } from './components/demo/comp-a/comp-a.component';
+import { CompBComponent } from './components/demo/comp-b/comp-b.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +35,8 @@ import { RegisterComponent } from './components/auth/register/register.component
     FilterPipe,
     LoginComponent,
     RegisterComponent,
+    CompAComponent,
+    CompBComponent,
   ],
   imports: [
     // Module : Built-in / Custom Module
