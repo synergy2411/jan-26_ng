@@ -144,8 +144,35 @@
 - Attributes Directive (ngClass, ngStyle)
 - Structural Directive
 
-let friends = ["monica", "ross", "joe"]
+## Angular Pipes
 
-friends.push("rachel"); // Impure change
+### Built in Pipes
 
-friends = ["monica", "ross", "joey", "rachel"] // Pure change
+- uppercase
+- lowercase
+- json
+- percent
+- number
+- currency
+- date
+- async
+
+### Custom Pipes
+
+- Pure (by default)
+  let friends = ["monica", "ross", "joe"]
+  friends = ["monica", "ross", "joey", "rachel"] // Pure change
+
+- Impure : less efficient
+  friends.push("rachel"); // Impure change
+
+## Angular Form
+
+- Template Form
+- Model Form / Reactive Form
+
+### Form and Form Elements - Classes and States
+
+- touched/untouched
+- pristine/dirty
+- valid/invalid

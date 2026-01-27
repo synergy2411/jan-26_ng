@@ -1,0 +1,55 @@
+<div class="row">
+  <div class="col-8 offset-2">
+    <div class="card">
+      <div class="card-body">
+        <h1 class="text-center">Register Form</h1>
+        <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+          <!-- username -->
+          <div class="form-floating mb-3">
+            <input
+              type="text"
+              class="form-control"
+              name="username"
+              id="username"
+              placeholder=""
+              [formControl]="username"
+            />
+            <label for="username">Username</label>
+          </div>
+
+          <!-- password -->
+          <div class="form-floating mb-3">
+            <input
+              type="password"
+              class="form-control"
+              name="password"
+              id="password"
+              placeholder=""
+              [formControl]="password"
+            />
+            <label for="password">Password</label>
+          </div>
+
+          <!-- buttons -->
+          <div class="row">
+            <div class="col">
+              <div class="d-grid">
+                <button class="btn btn-success" type="submit">Register</button>
+              </div>
+            </div>
+            <div class="col">
+              <div class="d-grid">
+                <button
+                  class="btn btn-secondary"
+                  (click)="registerForm.reset()"
+                >
+                  Reset
+                </button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

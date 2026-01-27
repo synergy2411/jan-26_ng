@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { UsersComponent } from './components/users/users.component';
-import { FormsModule } from '@angular/forms';
 import { UserInfoComponent } from './components/users/user-info/user-info.component';
 import { UserImgComponent } from './components/users/user-img/user-img.component';
 import { LifeCycleComponent } from './components/demo/life-cycle/life-cycle.component';
@@ -14,6 +14,7 @@ import { PipeComponent } from './components/demo/pipe/pipe.component';
 import { CountryCodePipe } from './pipes/country-code.pipe';
 import { FilterPipe } from './pipes/filter.pipe';
 import { LoginComponent } from './components/auth/login/login.component';
+import { RegisterComponent } from './components/auth/register/register.component';
 
 @NgModule({
   declarations: [
@@ -30,11 +31,13 @@ import { LoginComponent } from './components/auth/login/login.component';
     CountryCodePipe,
     FilterPipe,
     LoginComponent,
+    RegisterComponent,
   ],
   imports: [
     // Module : Built-in / Custom Module
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [], // Service
   bootstrap: [AppComponent],
