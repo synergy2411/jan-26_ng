@@ -16,6 +16,8 @@
             />
             <label for="username">Username</label>
 
+            <!-- {{ this.registerForm.get("username")!.value | json }} -->
+
             <!-- Error Messages - username -->
             <div *ngIf="username.touched && username.invalid">
               <div *ngIf="username.hasError('required')">
@@ -40,6 +42,28 @@
               formControlName="password"
             />
             <label for="password">Password</label>
+
+            <!-- Error Message - Password Field -->
+            <div *ngIf="password.touched && password.invalid">
+              <p
+                *ngIf="password.hasError('required')"
+                class="alert alert-danger"
+              >
+                - Password is mandatory filed.
+              </p>
+              <p
+                *ngIf="password.hasError('minlength')"
+                class="alert alert-danger"
+              >
+                - Password should contain at least 6 characters.
+              </p>
+              <p
+                *ngIf="password.hasError('exclamation')"
+                class="alert alert-danger"
+              >
+                - Password must have exclamation sign(!).
+              </p>
+            </div>
           </div>
 
           <!-- buttons -->

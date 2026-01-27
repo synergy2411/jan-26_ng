@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
 import {
+  AbstractControl,
   FormBuilder,
   FormControl,
   FormGroup,
+  ValidationErrors,
   Validators,
 } from '@angular/forms';
 
@@ -13,7 +15,10 @@ import {
 })
 export class RegisterComponent {
   // uname = new FormControl();
-  // password = new FormControl();
+  // password = new FormControl('', [
+  //       Validators.required,
+  //       Validators.minLength(6),
+  //     ])
 
   registerForm: FormGroup;
 
@@ -23,6 +28,7 @@ export class RegisterComponent {
       password: new FormControl('', [
         Validators.required,
         Validators.minLength(6),
+        RegisterComponent.exclamationValidator,
       ]),
     });
   }
@@ -31,7 +37,19 @@ export class RegisterComponent {
     return this.registerForm.get('username') as FormControl;
   }
 
+  get password() {
+    return this.registerForm.get('password') as FormControl;
+  }
+
   onSubmit() {
     console.log(this.registerForm);
+  }
+
+  // Custom Validator
+  static exclamationValidator(
+    control: AbstractControl,
+  ): null | ValidationErrors {
+    const hasExclamation = control.value.indexOf('!') >= 0;
+    return hasExclamation ? null : { exclamation: true };
   }
 }
