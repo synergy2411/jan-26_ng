@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {
   AbstractControl,
+  FormArray,
   FormBuilder,
   FormControl,
   FormGroup,
@@ -22,6 +23,8 @@ export class RegisterComponent {
 
   registerForm: FormGroup;
 
+  countries = ['india', 'australia', 'singapore', 'geneva'];
+
   constructor(private fb: FormBuilder) {
     this.registerForm = this.fb.group({
       username: new FormControl('', [Validators.required, Validators.email]),
@@ -30,6 +33,8 @@ export class RegisterComponent {
         Validators.minLength(6),
         RegisterComponent.exclamationValidator,
       ]),
+      country: new FormControl(''),
+      hobbies: this.fb.array([]),
     });
   }
 
@@ -39,6 +44,23 @@ export class RegisterComponent {
 
   get password() {
     return this.registerForm.get('password') as FormControl;
+  }
+
+  get hobbies() {
+    return this.registerForm.get('hobbies') as FormArray;
+  }
+
+  onAddHobby() {
+    this.hobbies.push(
+      this.fb.group({
+        name: new FormControl(),
+        freq: new FormControl(),
+      }),
+    );
+  }
+
+  onRemove(i: number) {
+    this.hobbies.removeAt(i);
   }
 
   onSubmit() {

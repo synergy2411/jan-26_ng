@@ -176,3 +176,8 @@
 - touched/untouched
 - pristine/dirty
 - valid/invalid
+
+### FormArray
+
+- Group of FormControl
+- Group of FormGroups
