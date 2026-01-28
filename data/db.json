@@ -1,0 +1,19 @@
+{
+  "expenses": [
+    {
+      "id": "e001",
+      "title": "grocery",
+      "amount": 99
+    },
+    {
+      "id": "e002",
+      "title": "shopping",
+      "amount": 79
+    },
+    {
+      "id": "e003",
+      "title": "insurance",
+      "amount": 49
+    }
+  ]
+}
