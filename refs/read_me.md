@@ -231,3 +231,20 @@
   > No Operator suuport
   > Can't be cancelled
   > http polling
+
+### Observable : stream of events
+
+### Observer: next(), error(), complete()
+
+### Subjects
+
+- are both observer and observable
+- can have multiple subscribers
+- next(), error(), complete()
+- pipe(), subscribe()
+
+#### Subject Types
+
+- BehaviourSubject : last emitted value becomes seed value for the subsequent sunscribers
+- ReplaySubject : number of last emission captured in subsequent subscriptions
+- AsyncSubject : consume last emitted value upon completion

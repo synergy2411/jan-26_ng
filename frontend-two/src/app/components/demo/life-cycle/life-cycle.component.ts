@@ -11,6 +11,7 @@ import {
   OnInit,
   SimpleChanges,
 } from '@angular/core';
+import { interval, Subscribable, Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-life-cycle',
@@ -28,6 +29,9 @@ export class LifeCycleComponent
     AfterViewChecked,
     OnDestroy
 {
+  interval$ = interval(1000);
+  unsub$!: Subscription;
+
   @Input() title: string = '';
 
   constructor() {
@@ -39,6 +43,7 @@ export class LifeCycleComponent
   }
   ngOnInit(): void {
     console.log('ngOnInit');
+    this.unsub$ = this.interval$.subscribe(console.log);
   }
   ngDoCheck(): void {
     console.log('ngDoCheck');
@@ -57,5 +62,6 @@ export class LifeCycleComponent
   }
   ngOnDestroy(): void {
     console.log('ngOnDestroy');
+    this.unsub$.unsubscribe();
   }
 }
