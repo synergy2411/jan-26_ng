@@ -11,6 +11,7 @@ export class ExpenseFormComponent {
   expenseForm: FormGroup;
 
   @Output() newExpenseEvent = new EventEmitter<IExpense>();
+  @Output() closeEvent = new EventEmitter();
 
   constructor(private fb: FormBuilder) {
     this.expenseForm = this.fb.group({
@@ -22,5 +23,9 @@ export class ExpenseFormComponent {
   onSubmit() {
     // console.log(this.expenseForm.value);
     this.newExpenseEvent.emit(this.expenseForm.value);
+  }
+
+  onClose() {
+    this.closeEvent.emit();
   }
 }

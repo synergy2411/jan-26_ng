@@ -13,6 +13,7 @@
 <app-expense-form
   *ngIf="showForm"
   (newExpenseEvent)="onAddNewExpense($event)"
+  (closeEvent)="showForm = false"
 ></app-expense-form>
 
 <div class="row">
