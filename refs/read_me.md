@@ -177,15 +177,28 @@
 - pristine/dirty
 - valid/invalid
 
+### Model Form / Reactive Form
+
+- FormControl
+- FormGroup
+- FormBuilder
+- FormArray
+
 ### FormArray
 
 - Group of FormControl
 - Group of FormGroups
 
-### Counter Service
+## Angular Services
 
-- CompA
-- CompB
+- Data consistency
+- Singleton effect
+- DI Concepts
+- Single Responsibility Principle
+
+### Dependency Injection Hierarchy
+
+### Multiple Service Registration
 
 ### Dependency Injector Modifiers
 
@@ -193,3 +206,28 @@
 - @Self() : Only search injector token inside the same/self component
 - @Host() : Search injector token in Parent/Host component
 - @Optional() : Ignors NullInjector Error, making the Dependency as optional.
+
+### Counter Service
+
+- CompA
+- CompB
+
+## RxJS Observables vs Promise
+
+- Observable
+
+  > Series of events
+  > both sync as well async
+  > lazy, by default
+  > event based
+  > support various operators
+  > keeps an eye on data source
+  > can be cancelled
+
+- Promises
+  > One shot (fulfilled / rejected)
+  > can only be async
+  > eagerly executed
+  > No Operator suuport
+  > Can't be cancelled
+  > http polling

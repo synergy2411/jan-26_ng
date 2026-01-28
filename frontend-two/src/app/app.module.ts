@@ -18,6 +18,7 @@ import { RegisterComponent } from './components/auth/register/register.component
 import { UserService } from './services/user.service';
 import { CompAComponent } from './components/demo/comp-a/comp-a.component';
 import { CompBComponent } from './components/demo/comp-b/comp-b.component';
+import { ObservableComponent } from './components/demo/observable/observable.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { CompBComponent } from './components/demo/comp-b/comp-b.component';
     RegisterComponent,
     CompAComponent,
     CompBComponent,
+    ObservableComponent,
   ],
   imports: [
     // Module : Built-in / Custom Module
