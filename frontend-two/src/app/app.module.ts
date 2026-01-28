@@ -21,6 +21,7 @@ import { CompAComponent } from './components/demo/comp-a/comp-a.component';
 import { CompBComponent } from './components/demo/comp-b/comp-b.component';
 import { ObservableComponent } from './components/demo/observable/observable.component';
 import { GlobalErrorHandlerService } from './services/global-error-handler.service';
+import { ExpensesComponent } from './components/expenses/expenses.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { GlobalErrorHandlerService } from './services/global-error-handler.servi
     CompAComponent,
     CompBComponent,
     ObservableComponent,
+    ExpensesComponent,
   ],
   imports: [
     // Module : Built-in / Custom Module

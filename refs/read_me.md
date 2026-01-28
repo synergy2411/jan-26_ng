@@ -248,3 +248,10 @@
 - BehaviourSubject : last emitted value becomes seed value for the subsequent sunscribers
 - ReplaySubject : number of last emission captured in subsequent subscriptions
 - AsyncSubject : consume last emitted value upon completion
+
+## JSON Server
+
+- npm install json-server@0.17.4 -g
+- create json file
+- run json-server
+  > json-server --watch db.json
