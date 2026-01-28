@@ -13,4 +13,12 @@ export class ExpenseService {
   fetchAll() {
     return this.http.get<Array<IExpense>>(this.baseUrl);
   }
+
+  create(expense: IExpense) {
+    return this.http.post<IExpense>(this.baseUrl, expense, {
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+  }
 }

@@ -1,13 +1,28 @@
-<h1 class="text-center">
-  <div class="row">
-    <div class="col-4" *ngFor="let expense of expenseCollection">
-      <div class="card">
-        <div class="card-header">
-          <h5 class="text-center">
-            {{ expense.title | titlecase }}
-          </h5>
-        </div>
+<h1 class="text-center">Expense App</h1>
+
+<div class="row">
+  <div class="col-4 offset-4">
+    <div class="d-grid">
+      <button class="btn btn-primary" (click)="showForm = !showForm">
+        Add Expense
+      </button>
+    </div>
+  </div>
+</div>
+
+<app-expense-form
+  *ngIf="showForm"
+  (newExpenseEvent)="onAddNewExpense($event)"
+></app-expense-form>
+
+<div class="row">
+  <div class="col-4" *ngFor="let expense of expenseCollection">
+    <div class="card">
+      <div class="card-header">
+        <h5 class="text-center">
+          {{ expense.title | titlecase }}
+        </h5>
       </div>
     </div>
   </div>
-</h1>
+</div>

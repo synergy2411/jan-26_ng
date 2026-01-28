@@ -1,0 +1,20 @@
+.backdrop {
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100vw;
+  height: 100vh;
+  z-index: 50;
+}
+
+.my-dialog {
+  position: fixed;
+  left: 30vw;
+  top: 15vh;
+  background-color: #fff;
+  width: 40vw;
+  /* height: 0vh; */
+  z-index: 70;
+  padding: 24px;
+}
