@@ -2,6 +2,7 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { UsersComponent } from './components/users/users.component';
@@ -26,6 +27,10 @@ import { ExpenseFormComponent } from './components/expenses/expense-form/expense
 import { ExpenseItemComponent } from './components/expenses/expense-item/expense-item.component';
 import { LoggerService } from './services/interceptors/logger.service';
 import { ResponseService } from './services/interceptors/response.service';
+import { NotFoundComponent } from './components/not-found/not-found.component';
+import { CoursesComponent } from './pages/courses/courses.component';
+import { APP_ROUTES } from './app.routes';
+import { MainNavigationComponent } from './components/ui/main-navigation/main-navigation.component';
 
 @NgModule({
   declarations: [
@@ -49,6 +54,9 @@ import { ResponseService } from './services/interceptors/response.service';
     ExpensesComponent,
     ExpenseFormComponent,
     ExpenseItemComponent,
+    NotFoundComponent,
+    CoursesComponent,
+    MainNavigationComponent,
   ],
   imports: [
     // Module : Built-in / Custom Module
@@ -56,6 +64,7 @@ import { ResponseService } from './services/interceptors/response.service';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    RouterModule.forRoot(APP_ROUTES),
   ],
   providers: [
     {

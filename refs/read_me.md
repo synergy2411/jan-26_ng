@@ -261,3 +261,19 @@
 - create json file
 - run json-server
   > json-server --watch db.json
+
+## Single Page Apps
+
+- One Page; does not reload / refresh
+- Dynamic Content
+- Loading dynamic content conditionally
+- Shareable / Bookmarkable URL
+- Deeply linked content
+- RBAC - Role Based Access Control
+- Modular approach
+- Lazy loading
+- State Management
+- Complete App is sent to browser in one go
+- Better UX
+- high bootstrap / loading time
+- huge build size
