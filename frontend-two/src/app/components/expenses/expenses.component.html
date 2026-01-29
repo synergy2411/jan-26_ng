@@ -1,6 +1,6 @@
 <h1 class="text-center">Expense App</h1>
 
-<div class="row">
+<div class="row mb-4">
   <div class="col-4 offset-4">
     <div class="d-grid">
       <button class="btn btn-primary" (click)="showForm = !showForm">
@@ -16,9 +16,16 @@
   (closeEvent)="showForm = false"
 ></app-expense-form>
 
+<app-expense-item
+  [expense]="selectedExpense"
+  *ngIf="showExpense"
+  (closeEvent)="showExpense = false"
+  (deleteEvent)="onDelete($event)"
+></app-expense-item>
+
 <div class="row">
-  <div class="col-4" *ngFor="let expense of expenseCollection">
-    <div class="card">
+  <div class="col-4 mb-3" *ngFor="let expense of expenseCollection">
+    <div class="card" (click)="onSelectExpense(expense.id)">
       <div class="card-header">
         <h5 class="text-center">
           {{ expense.title | titlecase }}

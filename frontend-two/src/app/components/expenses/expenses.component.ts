@@ -11,6 +11,8 @@ export class ExpensesComponent implements OnInit {
   expenseCollection!: Array<IExpense>;
 
   showForm = false;
+  showExpense = false;
+  selectedExpense!: IExpense;
 
   constructor(private service: ExpenseService) {}
 
@@ -24,6 +26,22 @@ export class ExpensesComponent implements OnInit {
     this.service.create(newExpense).subscribe((expense) => {
       this.expenseCollection = [expense, ...this.expenseCollection];
       this.showForm = false;
+    });
+  }
+
+  onSelectExpense(expenseId: string) {
+    this.service.fetch(expenseId).subscribe((expense) => {
+      this.selectedExpense = expense;
+      this.showExpense = true;
+    });
+  }
+
+  onDelete(expenseId: string) {
+    this.service.delete(expenseId).subscribe(() => {
+      this.showExpense = false;
+      this.expenseCollection = this.expenseCollection.filter(
+        (exp) => exp.id !== expenseId,
+      );
     });
   }
 }

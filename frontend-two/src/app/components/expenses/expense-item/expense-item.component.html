@@ -1,0 +1,14 @@
+<div class="backdrop">
+  <div class="my-dialog">
+    <h4>{{ expense.title | titlecase }}</h4>
+    <p>Amount : {{ expense.amount | currency }}</p>
+    <div class="float-end">
+      <button (click)="onDelete()" class="btn btn-sm btn-outline-danger">
+        Delete
+      </button>
+      <button (click)="onClose()" class="btn btn-sm btn-secondary">
+        Close
+      </button>
+    </div>
+  </div>
+</div>

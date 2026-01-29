@@ -23,6 +23,7 @@ import { ObservableComponent } from './components/demo/observable/observable.com
 import { GlobalErrorHandlerService } from './services/global-error-handler.service';
 import { ExpensesComponent } from './components/expenses/expenses.component';
 import { ExpenseFormComponent } from './components/expenses/expense-form/expense-form.component';
+import { ExpenseItemComponent } from './components/expenses/expense-item/expense-item.component';
 
 @NgModule({
   declarations: [
@@ -45,6 +46,7 @@ import { ExpenseFormComponent } from './components/expenses/expense-form/expense
     ObservableComponent,
     ExpensesComponent,
     ExpenseFormComponent,
+    ExpenseItemComponent,
   ],
   imports: [
     // Module : Built-in / Custom Module

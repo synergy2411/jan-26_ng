@@ -228,7 +228,7 @@
   > One shot (fulfilled / rejected)
   > can only be async
   > eagerly executed
-  > No Operator suuport
+  > No Operator support
   > Can't be cancelled
   > http polling
 
@@ -248,6 +248,11 @@
 - BehaviourSubject : last emitted value becomes seed value for the subsequent sunscribers
 - ReplaySubject : number of last emission captured in subsequent subscriptions
 - AsyncSubject : consume last emitted value upon completion
+
+## HttpClient -
+
+- HttpClientModule
+- HttpClient Service
 
 ## JSON Server
 

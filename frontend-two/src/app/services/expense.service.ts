@@ -21,4 +21,12 @@ export class ExpenseService {
       },
     });
   }
+
+  fetch(expenseId: string) {
+    return this.http.get<IExpense>(`${this.baseUrl}/${expenseId}`);
+  }
+
+  delete(expenseId: string) {
+    return this.http.delete(`${this.baseUrl}/${expenseId}`);
+  }
 }
