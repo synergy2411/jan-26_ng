@@ -1,7 +1,7 @@
 import { ErrorHandler, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { UsersComponent } from './components/users/users.component';
@@ -24,6 +24,8 @@ import { GlobalErrorHandlerService } from './services/global-error-handler.servi
 import { ExpensesComponent } from './components/expenses/expenses.component';
 import { ExpenseFormComponent } from './components/expenses/expense-form/expense-form.component';
 import { ExpenseItemComponent } from './components/expenses/expense-item/expense-item.component';
+import { LoggerService } from './services/interceptors/logger.service';
+import { ResponseService } from './services/interceptors/response.service';
 
 @NgModule({
   declarations: [
@@ -63,6 +65,16 @@ import { ExpenseItemComponent } from './components/expenses/expense-item/expense
     {
       provide: ErrorHandler,
       useClass: GlobalErrorHandlerService,
+    },
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: LoggerService,
+      multi: true,
+    },
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: ResponseService,
+      multi: true,
     },
   ], // Service
   bootstrap: [AppComponent],

@@ -15,11 +15,7 @@ export class ExpenseService {
   }
 
   create(expense: IExpense) {
-    return this.http.post<IExpense>(this.baseUrl, expense, {
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    });
+    return this.http.post<IExpense>(this.baseUrl, expense);
   }
 
   fetch(expenseId: string) {

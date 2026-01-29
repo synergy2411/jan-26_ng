@@ -253,6 +253,7 @@
 
 - HttpClientModule
 - HttpClient Service
+- Interceptors
 
 ## JSON Server
 
