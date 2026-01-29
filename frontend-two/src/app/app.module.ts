@@ -31,6 +31,7 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
 import { CoursesComponent } from './pages/courses/courses.component';
 import { APP_ROUTES } from './app.routes';
 import { MainNavigationComponent } from './components/ui/main-navigation/main-navigation.component';
+import { CourseDetailComponent } from './pages/courses/course-detail/course-detail.component';
 
 @NgModule({
   declarations: [
@@ -57,6 +58,7 @@ import { MainNavigationComponent } from './components/ui/main-navigation/main-na
     NotFoundComponent,
     CoursesComponent,
     MainNavigationComponent,
+    CourseDetailComponent,
   ],
   imports: [
     // Module : Built-in / Custom Module

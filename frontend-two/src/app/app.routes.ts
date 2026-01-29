@@ -4,6 +4,7 @@ import { RegisterComponent } from './components/auth/register/register.component
 import { ExpensesComponent } from './components/expenses/expenses.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { CoursesComponent } from './pages/courses/courses.component';
+import { CourseDetailComponent } from './pages/courses/course-detail/course-detail.component';
 
 export const APP_ROUTES: Routes = [
   {
@@ -24,8 +25,14 @@ export const APP_ROUTES: Routes = [
     component: ExpensesComponent,
   },
   {
-    path: 'courses',
+    path: 'courses', // http://localhost:4200/courses
     component: CoursesComponent,
+    children: [
+      {
+        path: ':courseId', // http://localhost:4200/courses/course-detail
+        component: CourseDetailComponent,
+      },
+    ],
   },
   {
     path: '**',
