@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { CourseService } from '../../../services/course.service';
 import { ICourse } from '../../../model/course-model';
 
@@ -14,6 +14,7 @@ export class CourseDetailComponent implements OnInit {
   constructor(
     private service: CourseService,
     private route: ActivatedRoute,
+    private router: Router,
   ) {}
 
   ngOnInit(): void {
@@ -23,5 +24,29 @@ export class CourseDetailComponent implements OnInit {
         this.course = course;
       });
     });
+  }
+
+  onEdit() {
+    // Create a form for Course to Edit
+  }
+
+  onDelete() {
+    if (
+      confirm(
+        'Are you sure to delete this item - ' +
+          this.course.title.toUpperCase() +
+          ' ?',
+      )
+    ) {
+      this.service.delete(this.course.id).subscribe(() => {
+        // Why UI not updated ?
+        // this.router.navigateByUrl('/courses');
+        this.router.navigateByUrl('/login');
+      });
+    }
+  }
+
+  onClose() {
+    this.router.navigateByUrl('/courses');
   }
 }

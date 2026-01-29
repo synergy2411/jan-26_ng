@@ -277,3 +277,11 @@
 - Better UX
 - high bootstrap / loading time
 - huge build size
+
+### Routing Terminologies
+
+- <base href="/"> : should represent domain
+- Routes: creates routing configuration; maps path with components
+- RouterModule.forRoot(RouteConfig) : Supplied route config with module
+- routerLink attribute with <a> element: prevent page reloading
+- <router-outlet> : to load component template

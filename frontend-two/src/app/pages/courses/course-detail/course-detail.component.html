@@ -1,5 +1,5 @@
 <div class="backdrop">
-  <div class="my-dialog">
+  <div class="my-dialog" [ngStyle]="{ width: '20rem' }">
     <div class="card">
       <img class="card-img-top" [src]="course.logo" [alt]="course.title" />
       <div class="card-body">
@@ -7,6 +7,36 @@
           <h5>{{ course.title | uppercase }}</h5>
         </h4>
         <p class="card-text">Duration : {{ course.duration }} Hrs.</p>
+
+        <div class="row mb-3">
+          <div class="col-6">
+            <div class="d-grid">
+              <button (click)="onEdit()" class="btn btn-sm btn-success">
+                Edit
+              </button>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="d-grid">
+              <button
+                class="btn btn-outline-danger btn-sm"
+                (click)="onDelete()"
+              >
+                Delete
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <div class="d-grid">
+              <button class="btn btn-secondary btn-sm" (click)="onClose()">
+                close
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>

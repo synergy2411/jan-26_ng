@@ -30,5 +30,13 @@
       "amount": 99,
       "id": "es3fo2Q"
     }
+  ],
+  "courses": [
+    {
+      "id": "c001",
+      "title": "Awesome Angular",
+      "duration": 40,
+      "logo": "https://angular.dev/assets/images/press-kit/angular_icon_gradient.gif"
+    }
   ]
 }
