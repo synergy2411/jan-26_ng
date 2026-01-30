@@ -1,1 +1,6 @@
 <h1 id="greeting">Hello {{ username }}</h1>
+
+<button (click)="onToggle()">Toggle</button>
+
+<p *ngIf="toggle">Toggle is true</p>
+<p *ngIf="!toggle">Toggle is False</p>

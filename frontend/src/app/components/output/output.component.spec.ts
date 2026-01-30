@@ -35,4 +35,18 @@ describe('OutputComponent', () => {
       'Hello Monica Geller',
     );
   });
+
+  it('should render p element when toggle is true', () => {
+    const pElement = de.query(By.css('p'));
+    expect(pElement.nativeElement.textContent).toContain('Toggle is true');
+  });
+
+  it('should not render p element when toggle is false', () => {
+    const btnElement = de.query(By.css('button'));
+    btnElement.triggerEventHandler('click', null);
+    expect(fixture.componentInstance.toggle).toBeFalsy();
+    fixture.detectChanges();
+    const pElement = de.query(By.css('p'));
+    expect(pElement.nativeElement.textContent).toContain('Toggle is False');
+  });
 });

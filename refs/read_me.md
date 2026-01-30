@@ -297,3 +297,4 @@
 
 - TestBed
 - Fixture
+  > ng test --code-coverage
