@@ -33,10 +33,15 @@ export const APP_ROUTES: Routes = [
     canActivate: [loginGuard],
     children: [
       {
-        path: ':courseId', // http://localhost:4200/courses/course-detail
+        path: ':courseId', // http://localhost:4200/courses/:courseId
         component: CourseDetailComponent,
       },
     ],
+  },
+  {
+    path: 'lazy',
+    loadChildren: () =>
+      import('./modules/lazy/lazy.module').then((m) => m.LazyModule),
   },
   {
     path: '**',
