@@ -4,3 +4,13 @@
 
 <p *ngIf="toggle">Toggle is true</p>
 <p *ngIf="!toggle">Toggle is False</p>
+
+<hr />
+
+<h3>X : {{ x() }}</h3>
+<h3>Y : {{ y() }}</h3>
+
+<h3>Z : {{ z() }}</h3>
+
+<button (click)="increaseX()">Increase X</button>
+<button (click)="increaseY()">Increase Y</button>

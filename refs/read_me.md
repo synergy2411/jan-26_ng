@@ -110,7 +110,7 @@
 - npm install @angular/cli@17 -g
 - ng version
 
-- ng new frontend
+- ng new frontend [Standalone Project]
 - ng new frontend-two --no-standalone --no-routing
 
 - cd frontend
