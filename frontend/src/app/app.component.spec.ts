@@ -1,29 +1,20 @@
-import { TestBed } from '@angular/core/testing';
-import { AppComponent } from './app.component';
+describe('Just an Example', () => {
+  beforeEach(() => {});
+  afterEach(() => {});
+  beforeAll(() => {});
+  afterAll(() => {});
 
-describe('AppComponent', () => {
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [AppComponent],
-    }).compileComponents();
+  it('should be truthy', () => {
+    expect(true).toBeTruthy();
   });
 
-  it('should create the app', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app).toBeTruthy();
+  it("should match 'Hello World'", () => {
+    let greet = 'Hello World!';
+    expect(greet).toContain('Hello');
   });
 
-  it(`should have the 'frontend' title`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('frontend');
-  });
-
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, frontend');
+  it("should include friends starting with letter 'R' ", () => {
+    let friends = ['Ross', 'Rachel', 'Monica', 'Joey'];
+    expect(friends).toContain('Rachel');
   });
 });

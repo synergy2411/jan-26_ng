@@ -25,7 +25,10 @@
 <ul class="list-group">
   <li
     class="list-group-item mb-4"
-    *ngFor="let todo of todoCollection | filter: filteredStatus"
+    *ngFor="
+      let todo of todoCollection | filter: filteredStatus;
+      trackBy: trackById
+    "
   >
     <p>
       {{ todo.label | titlecase }}
