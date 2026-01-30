@@ -6,6 +6,7 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
 import { CoursesComponent } from './pages/courses/courses.component';
 import { CourseDetailComponent } from './pages/courses/course-detail/course-detail.component';
 import { loginGuard } from './services/guards/login.guard';
+import { exitGuard } from './services/guards/exit.guard';
 
 export const APP_ROUTES: Routes = [
   {
@@ -20,6 +21,7 @@ export const APP_ROUTES: Routes = [
   {
     path: 'register', // http://localhost:4200/register
     component: RegisterComponent,
+    canDeactivate: [exitGuard],
   },
   {
     path: 'expenses', // http://localhost:4200/expenses

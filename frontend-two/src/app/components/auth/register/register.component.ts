@@ -87,4 +87,9 @@ export class RegisterComponent {
     const hasExclamation = control.value.indexOf('!') >= 0;
     return hasExclamation ? null : { exclamation: true };
   }
+
+  // CanDeactivate Example
+  shouldLeave() {
+    return confirm('Are you sure to leave this page?');
+  }
 }
