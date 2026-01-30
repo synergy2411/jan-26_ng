@@ -41,7 +41,9 @@ export class CourseDetailComponent implements OnInit {
       this.service.delete(this.course.id).subscribe(() => {
         // Why UI not updated ?
         // this.router.navigateByUrl('/courses');
-        this.router.navigateByUrl('/login');
+        this.router.navigate(['/courses'], {
+          queryParams: { isDeleted: true },
+        });
       });
     }
   }

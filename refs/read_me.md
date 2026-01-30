@@ -285,3 +285,10 @@
 - RouterModule.forRoot(RouteConfig) : Supplied route config with module
 - routerLink attribute with <a> element: prevent page reloading
 - <router-outlet> : to load component template
+- ActivatedRoute Service : access current path in the url
+- Router Service : Programmatically navigate the user
+
+- Protected Routes
+- Modules
+- Testing
+- Tips and Conclusion
